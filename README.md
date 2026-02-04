@@ -41,8 +41,8 @@ If you have a suggestion that would make this better, please fork the repo and c
 Don't forget to give the project a star! Thanks again!
 
 ## Contact
-Gmail: khurrambashirraja@gmail.com
-JS Project Link: https://github.com/KhurramRaja35/Spotify-like-Music-Player
+- Gmail: khurrambashirraja@gmail.com
+- JS Project Link: https://github.com/KhurramRaja35/spotify-like-music-player
 
 
 
