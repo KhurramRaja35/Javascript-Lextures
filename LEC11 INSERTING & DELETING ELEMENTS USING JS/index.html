@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERTING & DELETING ELEMENTS USING JS</title>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="color: grey;" data-createdby="KBR" data-ideaby="Harry">HEY I AM A BOX.</div>
+        <div class="box">HEY I AM A BOX.</div>
+    </div>
+    <div class="iah">
+        
+    </div>
+
+    <script>
+        //e.g:- to create an element using js
+
+        let div = document.createElement("div");
+        div.setAttribute("class" ,  "created");
+        div.innerHTML="<span>I AM CREATED BY JS</span>";
+
+        // document.querySelector(".container").append(div); // .container k khtm hony se phly mgr usk andr hi
+
+        // document.querySelector(".container").prepend(div); // .container k shuru hony k bd sb se  phly mgr usk andr hi
+
+        // document.querySelector(".container").before(div);//before the .container element..bahir
+
+        document.querySelector(".container").after(div); //after the .container element..bahir
+
+        // document.querySelector(".box").replaceWith(div);// first element of .box class in .container is replace by our newly created div.. 
+
+        document.querySelector(".created").style.color="yellow"
+
+        //===INSERT ADJACENT HTML/TEXT/ELEMENT:-
+
+        let another = document.getElementsByClassName("iah");
+        another[0].insertAdjacentHTML("afterbegin" , "<p>HELLO</p>")
+        another[0].insertAdjacentHTML('beforeend' , '<p>HELLO</>')
+        another[0].insertAdjacentText('beforeend' , "IAT")
+        
+        
+
+        let newDiv = document.createElement("div");
+        newDiv.setAttribute("class" , "iae")
+        newDiv.textContent = "I AM A DIV";
+        another[0].insertAdjacentElement("beforeend", newDiv);
+
+
+        //=====REMOVE:-
+        newDiv.remove()
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
