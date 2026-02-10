@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT, EVENT BUBBLING, setIntervals & setTimeouts</title>
+    <style>
+        .bulb{
+            height: 314px;
+            width: 354px;
+            background-color: yellow;
+            border-radius: 50%;
+            border-top: 2px solid rgb(43, 60, 105);
+        }
+        .bulb-stop{
+            height: 314px;
+            width: 354px;
+            /* background-color: yellow; */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="alert('ooyeee')">I AM A BOX</div>
+    </div>    
+    <button id="btn" >CHANGE CONTENT</button>
+
+    <div class="question1">
+        <button onclick="alert('helloo1')">1</button>
+        <button onclick="alert('helloo2')">2</button>
+        <button onclick="alert('helloo3')">3</button>
+    </div>
+
+    <div class="question2">
+        <button>GOOGLE</button>
+        <button>FACEBOOK</button>
+        <button id="insta">INSTAGRAM</button>
+    </div>
+
+
+    <!-- // a use case of focus function withh the help of script witten bellow we can bring focus on any element or any window by window.focus() -->
+     <input type="text" id="myInput" placeholder="Click the button to focus here">
+<!-- <button onclick="document.getElementById('myInput').focus();">Focus Input</button> -->
+
+
+<div id="bulb" class="bulb bulb-stop" style="text-align: center;">
+bulb
+</div>
+
+
+
+    <script src="script.js"></script>
+    <script src="ps8.js"></script>
+    <script>
+    document.getElementById('myInput').focus();
+
+    document.getElementById("bulb").addEventListener("click",()=>{
+        setTimeout(() => {
+           document.querySelector("#bulb").classList.toggle("bulb")
+        }, 0);
+    })
+    //Q5:-
+    // setInterval(() => {
+    //        document.querySelector("#bulb").classList.toggle("bulb")
+    //     }, 1000);FOR AUTOMATIC TURN ON AND OFF
+        
+    </script>
+</body>
+</html>
